@@ -1,11 +1,9 @@
-# app/core/entities/payment.py
 from datetime import datetime
 from enum import Enum
 
 
 class PaymentStatus(str, Enum):
     COMPLETED = "COMPLETADO"
-    # Puedes añadir otros estados si son necesarios en el futuro, por ejemplo, PENDING, FAILED
 
 
 class Payment:

@@ -1,4 +1,3 @@
-# app/core/ports/repositories/payment_repository_base.py
 from abc import ABC, abstractmethod
 from typing import List, Optional
 from datetime import date
