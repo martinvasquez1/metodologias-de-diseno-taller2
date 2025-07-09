@@ -1,4 +1,3 @@
-# app/application/services/payment_service.py
 import logging
 from datetime import datetime
 from typing import List, Optional

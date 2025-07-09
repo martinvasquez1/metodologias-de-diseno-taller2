@@ -5,7 +5,7 @@ from fastapi import APIRouter, Request, Depends, HTTPException, status
 
 from app.infrastructure.dependency.dependencies import get_payment_service
 from app.infrastructure.schemas.payment_schemas import PaymentCreateInput, PaymentOutput
-from app.application.services.payment_service import PaymentService
+from app.application.payment_service import PaymentService
 
 logger = logging.getLogger(__name__)
 router_payments = APIRouter()

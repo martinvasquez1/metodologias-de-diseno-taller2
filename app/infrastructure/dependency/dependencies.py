@@ -1,7 +1,7 @@
 from app.infrastructure.repositories.in_memory_payment_repository import (
     InMemoryPaymentRepository,
 )
-from app.application.services.payment_service import PaymentService
+from app.application.payment_service import PaymentService
 
 
 in_memory_repo = InMemoryPaymentRepository()
