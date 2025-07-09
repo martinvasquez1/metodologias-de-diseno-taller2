@@ -1,10 +1,10 @@
-# app/adapters/handlers/payment_handler.py
+# app/infrastructure/handlers/payment_handler.py
 import logging
 from typing import List
 from fastapi import APIRouter, Request, Depends, HTTPException, status
 
-from app.adapters.dependency.dependencies import get_payment_service
-from app.adapters.schemas.payment_schemas import PaymentCreateInput, PaymentOutput
+from app.infrastructure.dependency.dependencies import get_payment_service
+from app.infrastructure.schemas.payment_schemas import PaymentCreateInput, PaymentOutput
 from app.application.services.payment_service import PaymentService
 
 logger = logging.getLogger(__name__)

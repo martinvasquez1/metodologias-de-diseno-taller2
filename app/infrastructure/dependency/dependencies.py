@@ -1,4 +1,4 @@
-from app.adapters.repositories.in_memory_payment_repository import (
+from app.infrastructure.repositories.in_memory_payment_repository import (
     InMemoryPaymentRepository,
 )
 from app.application.services.payment_service import PaymentService

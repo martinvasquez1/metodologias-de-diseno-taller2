@@ -5,10 +5,10 @@ from pyctuator.pyctuator import Pyctuator
 import uvicorn
 import os
 
-from app.adapters.handlers.payment_handler import (
+from app.infrastructure.handlers.payment_handler import (
     router_payments,
 )  # Importar el nuevo router
-from app.adapters.handlers.handler_health_check import router_health
+from app.infrastructure.handlers.handler_health_check import router_health
 from app.utils.log import logger as app_logger  # Usar el logger de tu archivo log.py
 
 # Configuración básica de logging si no está en log.py de forma global

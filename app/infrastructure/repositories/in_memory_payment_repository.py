@@ -1,4 +1,4 @@
-# app/adapters/repositories/in_memory_payment_repository.py
+# app/infrastructure/repositories/in_memory_payment_repository.py
 import logging
 from typing import List, Optional
 
