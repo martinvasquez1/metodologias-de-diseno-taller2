@@ -9,11 +9,9 @@ from app.infrastructure.handlers.payment_handler import (
     router_payments,
 )  # Importar el nuevo router
 from app.infrastructure.handlers.handler_health_check import router_health
-from app.utils.log import logger as app_logger  # Usar el logger de tu archivo log.py
 
 # Configuración básica de logging si no está en log.py de forma global
 logging.basicConfig(level=logging.INFO)
-app_logger.info("Initializing FastAPI application...")
 
 app = FastAPI(
     title="PayTrack API",
@@ -45,5 +43,4 @@ async def root():
 if __name__ == "__main__":
     host = os.getenv("HOST", "0.0.0.0")
     port = int(os.getenv("PORT", 8000))
-    app_logger.info(f"Starting Uvicorn server on {host}:{port}")
     uvicorn.run(app, host=host, port=port)
