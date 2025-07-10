@@ -1,4 +1,4 @@
-# app/infrastructure/handlers/payment_handler.py
+# app/infrastructure/http_handlers/payment_handler.py
 import logging
 from typing import List
 from fastapi import APIRouter, Request, Depends, HTTPException, status

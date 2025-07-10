@@ -5,10 +5,10 @@ from pyctuator.pyctuator import Pyctuator
 import uvicorn
 import os
 
-from app.infrastructure.handlers.payment_handler import (
+from app.infrastructure.http_handlers.payment_handler import (
     router_payments,
 )  # Importar el nuevo router
-from app.infrastructure.handlers.handler_health_check import router_health
+from app.infrastructure.http_handlers.handler_health_check import router_health
 
 # Configuración básica de logging si no está en log.py de forma global
 logging.basicConfig(level=logging.INFO)

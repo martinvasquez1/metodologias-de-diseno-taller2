@@ -1,4 +1,4 @@
-# app/infrastructure/handlers/handler_health_check.py
+# app/infrastructure/http_handlers/handler_health_check.py
 import logging
 from fastapi import APIRouter, Request
 
