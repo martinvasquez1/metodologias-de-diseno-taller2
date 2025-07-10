@@ -4,11 +4,12 @@ from typing import List, Optional
 
 from app.core.entities.payment import Payment, PaymentStatus
 from app.core.ports.repositories.payment_repository_base import PaymentRepositoryBase
+from app.application.payment_service_port import PaymentServiceBase
 
 logger = logging.getLogger(__name__)
 
 
-class PaymentService:
+class PaymentService(PaymentServiceBase):
     def __init__(self, payment_repository: PaymentRepositoryBase):
         self.payment_repository = payment_repository
         # ELIMINAR: self.next_id = 1  # ¡Esta línea es la que causaba el reinicio del ID!
