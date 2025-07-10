@@ -1,4 +1,4 @@
-# Metodologias de Diseno Taller 2
+# Metodologias de Diseño Taller 2
 
 Este repositorio implementa un sistema de pagos siguiendo arquitectura hexagonal.
 
