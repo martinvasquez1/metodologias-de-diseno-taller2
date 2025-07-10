@@ -2,6 +2,8 @@
 
 Este repositorio implementa un sistema de pagos siguiendo arquitectura hexagonal.
 
+Actualmente, el programa no está acoplado, lo que facilita la incorporación de nuevas funcionalidades. Al utilizar puertos y adaptadores, podemos crear pruebas para cada componente de forma independiente, mejorando así la legibilidad y mantenibilidad del código.
+
 ## Ejectuar
 
 ```bash
@@ -25,6 +27,10 @@ python3 -m venv env
 source env/bin/activate
 pip install -r requirements.txt
 ```
+
+## Suposiciones
+
+- En la lista de casos de uso no se incluyó la opción de actualizar un pago. Consideramos añadirla, pero para mantener el proyecto simple, decidimos omitirla. Dado el diseño del sistema, su implementación sería sencilla: solo se modificarían los puertos y se añadiría la nueva funcionalidad.
 
 ## Endpoints
 
@@ -72,3 +78,8 @@ DELETE /payments/{id_del_pago}
 ```bash
 GET /
 ```
+
+## Miembros
+
+- Martín Vásquez Medel
+- Maycol Zincker Lazarú
