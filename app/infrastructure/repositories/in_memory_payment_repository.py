@@ -1,4 +1,3 @@
-# app/infrastructure/repositories/in_memory_payment_repository.py
 import logging
 from typing import List, Optional
 
@@ -11,17 +10,13 @@ logger = logging.getLogger(__name__)
 class InMemoryPaymentRepository(PaymentRepositoryBase):
     def __init__(self):
         self.payments: List[Payment] = []
-        self._next_id = (
-            1  # Este es el ÚNICO lugar donde el next_id debe estar y ser persistente
-        )
+        self._next_id = 1
 
     def save(self, payment: Payment) -> Payment:
-        # Asignar un ID si es un nuevo pago (cuando payment.id es None)
         if payment.id is None:
             payment.id = self._next_id
             self._next_id += 1
 
-        # Si ya existe, actualiza (en este caso, reemplaza por el nuevo objeto)
         existing_index = next(
             (i for i, p in enumerate(self.payments) if p.id == payment.id), -1
         )
@@ -31,7 +26,7 @@ class InMemoryPaymentRepository(PaymentRepositoryBase):
         else:
             self.payments.append(payment)
             logger.info(f"Saved new payment with ID: {payment.id}")
-        return payment  # Retorna el objeto Payment con el ID ya asignado
+        return payment
 
     def get_all(self) -> List[Payment]:
         logger.info("Retrieving all payments from in-memory repository.")
