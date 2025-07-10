@@ -28,6 +28,12 @@ source env/bin/activate
 pip install -r requirements.txt
 ```
 
+### Sin env
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Suposiciones
 
 - En la lista de casos de uso no se incluyó la opción de actualizar un pago. Consideramos añadirla, pero para mantener el proyecto simple, decidimos omitirla. Dado el diseño del sistema, su implementación sería sencilla: solo se modificarían los puertos y se añadiría la nueva funcionalidad.
